@@ -1,0 +1,125 @@
+﻿@page
+@model EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>OP_Opportunities</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OP_Opportunities.Id" />
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Address" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Address" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Amount" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Amount" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.BusinessAccount" class="control-label"></label>
+                <input asp-for="OP_Opportunities.BusinessAccount" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.BusinessAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.ClassID" class="control-label"></label>
+                <input asp-for="OP_Opportunities.ClassID" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.ClassID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.ContactDisplayName" class="control-label"></label>
+                <input asp-for="OP_Opportunities.ContactDisplayName" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.ContactDisplayName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.ContactID" class="control-label"></label>
+                <input asp-for="OP_Opportunities.ContactID" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.ContactID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.ContactInformation" class="control-label"></label>
+                <input asp-for="OP_Opportunities.ContactInformation" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.ContactInformation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Details" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Details" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Estimation" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Estimation" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Estimation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Location" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Location" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.OpportunityID" class="control-label"></label>
+                <input asp-for="OP_Opportunities.OpportunityID" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.OpportunityID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Owner" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Owner" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Owner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.OwnerEmployeeName" class="control-label"></label>
+                <input asp-for="OP_Opportunities.OwnerEmployeeName" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.OwnerEmployeeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.ParentAccount" class="control-label"></label>
+                <input asp-for="OP_Opportunities.ParentAccount" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.ParentAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Reason" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Reason" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Stage" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Stage" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Stage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Status" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Status" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Subject" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Subject" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OP_Opportunities.Total" class="control-label"></label>
+                <input asp-for="OP_Opportunities.Total" class="form-control" />
+                <span asp-validation-for="OP_Opportunities.Total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,99 @@
+﻿@page
+@model CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SO_SalesOrders</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SO_SalesOrders.Approved" /> @Html.DisplayNameFor(model => model.SO_SalesOrders.Approved)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.ContactID" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.ContactID" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.ContactID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.CustomerID" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.CustomerID" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.CustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.CustomerOrder" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.CustomerOrder" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.CustomerOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.Date" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.Date" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.Description" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.Description" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="SO_SalesOrders.Hold" /> @Html.DisplayNameFor(model => model.SO_SalesOrders.Hold)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.OrderedQty" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.OrderedQty" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.OrderedQty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.OrderNbr" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.OrderNbr" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.OrderNbr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.OrderTotal" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.OrderTotal" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.OrderTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.OrderType" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.OrderType" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.OrderType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.ShipToAddress" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.ShipToAddress" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.ShipToAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.Status" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.Status" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SO_SalesOrders.Totals" class="control-label"></label>
+                <input asp-for="SO_SalesOrders.Totals" class="form-control" />
+                <span asp-validation-for="SO_SalesOrders.Totals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

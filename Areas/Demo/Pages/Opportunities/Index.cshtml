@@ -1,0 +1,144 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].BusinessAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ClassID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ContactDisplayName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ContactID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ContactInformation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Estimation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].OpportunityID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Owner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].OwnerEmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ParentAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Reason)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Stage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.OP_Opportunities) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessAccount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactDisplayName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInformation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Details)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estimation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpportunityID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerEmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentAccount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reason)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

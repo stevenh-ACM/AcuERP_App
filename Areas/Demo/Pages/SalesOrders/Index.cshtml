@@ -1,0 +1,114 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].Approved)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].ContactID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].CustomerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].CustomerOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].Hold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].OrderedQty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].OrderNbr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].OrderTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].OrderType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].ShipToAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SO_SalesOrders[0].Totals)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SO_SalesOrders) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderedQty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderNbr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipToAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Totals)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

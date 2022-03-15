@@ -1,0 +1,110 @@
+﻿@page
+@model EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CR_Cases</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CR_Cases.Id" />
+            <div class="form-group">
+                <label asp-for="CR_Cases.BusinessAccount" class="control-label"></label>
+                <input asp-for="CR_Cases.BusinessAccount" class="form-control" />
+                <span asp-validation-for="CR_Cases.BusinessAccount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.BusinessAccountName" class="control-label"></label>
+                <input asp-for="CR_Cases.BusinessAccountName" class="form-control" />
+                <span asp-validation-for="CR_Cases.BusinessAccountName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.CaseID" class="control-label"></label>
+                <input asp-for="CR_Cases.CaseID" class="form-control" />
+                <span asp-validation-for="CR_Cases.CaseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.ClassID" class="control-label"></label>
+                <input asp-for="CR_Cases.ClassID" class="form-control" />
+                <span asp-validation-for="CR_Cases.ClassID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.ClosingDate" class="control-label"></label>
+                <input asp-for="CR_Cases.ClosingDate" class="form-control" />
+                <span asp-validation-for="CR_Cases.ClosingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.ContactDisplayName" class="control-label"></label>
+                <input asp-for="CR_Cases.ContactDisplayName" class="form-control" />
+                <span asp-validation-for="CR_Cases.ContactDisplayName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.ContactID" class="control-label"></label>
+                <input asp-for="CR_Cases.ContactID" class="form-control" />
+                <span asp-validation-for="CR_Cases.ContactID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Contract" class="control-label"></label>
+                <input asp-for="CR_Cases.Contract" class="form-control" />
+                <span asp-validation-for="CR_Cases.Contract" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.DateReported" class="control-label"></label>
+                <input asp-for="CR_Cases.DateReported" class="form-control" />
+                <span asp-validation-for="CR_Cases.DateReported" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Description" class="control-label"></label>
+                <input asp-for="CR_Cases.Description" class="form-control" />
+                <span asp-validation-for="CR_Cases.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Owner" class="control-label"></label>
+                <input asp-for="CR_Cases.Owner" class="form-control" />
+                <span asp-validation-for="CR_Cases.Owner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.OwnerEmployeeName" class="control-label"></label>
+                <input asp-for="CR_Cases.OwnerEmployeeName" class="form-control" />
+                <span asp-validation-for="CR_Cases.OwnerEmployeeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Priority" class="control-label"></label>
+                <input asp-for="CR_Cases.Priority" class="form-control" />
+                <span asp-validation-for="CR_Cases.Priority" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Reason" class="control-label"></label>
+                <input asp-for="CR_Cases.Reason" class="form-control" />
+                <span asp-validation-for="CR_Cases.Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Status" class="control-label"></label>
+                <input asp-for="CR_Cases.Status" class="form-control" />
+                <span asp-validation-for="CR_Cases.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CR_Cases.Subject" class="control-label"></label>
+                <input asp-for="CR_Cases.Subject" class="form-control" />
+                <span asp-validation-for="CR_Cases.Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

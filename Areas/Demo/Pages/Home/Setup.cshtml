@@ -1,0 +1,82 @@
+﻿@page
+@model SetupModel
+@{
+    ViewData["Title"] = "Demo Setup";
+}
+<h2>Acumatica API @ViewData["Title"] page</h2><br/>
+
+<h3>Existing Connections for Demo</h3>
+<table class="table container-fluid">
+    <thead>
+        <tr>
+            <th>Site Url</th>
+            <th>User Name</th>                
+            <th>Tenant</th>
+            <th>Branch</th>
+            <th>Locale</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var acuAuth in Model.acuAuths)
+        {
+            <tr>
+                <td>@acuAuth.SiteUrl</td>
+                <td>@acuAuth.UserName</td>
+                <td>@acuAuth.Tenant</td>
+                <td>@acuAuth.Branch</td>
+                <td>@acuAuth.Locale</td>
+                <td>
+                    <a asp-page="./edit" asp-route-id="@acuAuth.Id">Edit</a> |
+                    <a asp-page="./details" asp-route-id="@acuAuth.Id">Details</a> |
+                    <a asp-page="./delete" asp-route-id="@acuAuth.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-area="Demo" asp-page="./Main">Get SalesOrder</a>
+
+<form method="post">
+
+    <div>
+        <label asp-for="acuAuth.SiteUrl"></label>
+        <div>
+            <input asp-for="acuAuth.SiteUrl" />
+            <span asp-validation-for="acuAuth.SiteUrl" class="text-danger"></span>
+        </div>
+
+        <label asp-for="acuAuth.UserName"></label>
+        <div>
+            <input asp-for="acuAuth.UserName" />
+            <span asp-validation-for="acuAuth.UserName" class="text-danger"></span>
+        </div>
+
+        <label asp-for="acuAuth.Password"></label>
+        <div>
+            <input asp-for="acuAuth.Password" />
+            <span asp-validation-for="acuAuth.Password" class="text-danger"></span>
+        </div>
+
+        <label asp-for="acuAuth.Tenant"></label>
+        <div>
+            <input asp-for="acuAuth.Tenant" />
+            <span asp-validation-for="acuAuth.Tenant" class="text-danger"></span>
+        </div>
+
+        <label asp-for="acuAuth.Branch"></label>
+        <div>
+            <input asp-for="acuAuth.Branch" />
+            <span asp-validation-for="acuAuth.Branch" class="text-danger"></span>
+        </div>
+
+        <label asp-for="acuAuth.Locale"></label>
+        <div>
+            <input asp-for="acuAuth.Locale" />
+            <span asp-validation-for="acuAuth.Locale" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div>
+    <a asp-area="Demo" asp-page="./Main">Get SalesOrders</a>
+    </div>
+</form>

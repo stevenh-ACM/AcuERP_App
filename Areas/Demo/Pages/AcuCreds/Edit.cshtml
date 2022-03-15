@@ -1,0 +1,60 @@
+﻿@page
+@model EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>AcuAuth</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AcuAuth.Id" />
+            <div class="form-group">
+                <label asp-for="AcuAuth.SiteUrl" class="control-label"></label>
+                <input asp-for="AcuAuth.SiteUrl" class="form-control" />
+                <span asp-validation-for="AcuAuth.SiteUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AcuAuth.UserName" class="control-label"></label>
+                <input asp-for="AcuAuth.UserName" class="form-control" />
+                <span asp-validation-for="AcuAuth.UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AcuAuth.Password" class="control-label"></label>
+                <input asp-for="AcuAuth.Password" class="form-control" />
+                <span asp-validation-for="AcuAuth.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AcuAuth.Tenant" class="control-label"></label>
+                <input asp-for="AcuAuth.Tenant" class="form-control" />
+                <span asp-validation-for="AcuAuth.Tenant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AcuAuth.Branch" class="control-label"></label>
+                <input asp-for="AcuAuth.Branch" class="form-control" />
+                <span asp-validation-for="AcuAuth.Branch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AcuAuth.Locale" class="control-label"></label>
+                <input asp-for="AcuAuth.Locale" class="form-control" />
+                <span asp-validation-for="AcuAuth.Locale" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
