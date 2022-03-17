@@ -1,8 +1,9 @@
 ﻿@page
-@model IndexModel
+@model AcuERP_App.Areas.Demo.Pages.Contacts.IndexModel
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h1>Index</h1>
@@ -14,67 +15,67 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Active)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Active)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Address)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Address)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].BusinessAccount)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].BusinessAccount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].CompanyName)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].CompanyName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].ContactClass)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].ContactClass)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].ContactID)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].ContactID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].DisplayName)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].DisplayName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Email)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].FirstName)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].FirstName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].JobTitle)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].JobTitle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].LastName)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].LastName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].MiddleName)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].MiddleName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Owner)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Owner)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].OwnerEmployeeName)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].OwnerEmployeeName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].ParentAccount)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].ParentAccount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Phone1)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Phone1)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Phone1Type)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Phone1Type)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Title)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Contacts[0].Type)
+                @Html.DisplayNameFor(model => model.CR_Contact[0].Type)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.CR_Contacts) {
+@foreach (var item in Model.CR_Contact) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Active)

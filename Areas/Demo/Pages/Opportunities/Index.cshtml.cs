@@ -1,25 +1,30 @@
-﻿
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using AcuERP_App.Data;
 using AcuERP_App.Models;
 
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-
-namespace AcuERP_App.Areas.Demo.Pages.Opportunities;
-
-public class IndexModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Opportunities
 {
-    private readonly AppDbContext _context;
-
-    public IndexModel(AppDbContext context)
+    public class IndexModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    public IList<OP_Opportunities> OP_Opportunities { get; set; }
+        public IndexModel(AcuERP_App.Data.AppDbContext context)
+        {
+            _context = context;
+        }
 
-    public async Task OnGetAsync()
-    {
-        OP_Opportunities = await _context.OP_Opportunities.ToListAsync();
+        public IList<OP_Opportunity> OP_Opportunity { get;set; }
+
+        public async Task OnGetAsync()
+        {
+            OP_Opportunity = await _context.OP_Opportunities.ToListAsync();
+        }
     }
 }

@@ -1,0 +1,699 @@
+3/15/2022 11:54:00 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"MyTenant","tenant":"main","branch":"en-us"}
+-----------------------------------------
+
+3/15/2022 11:54:52 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"MyTenant","tenant":"main","branch":"en-us"}
+-----------------------------------------
+
+3/15/2022 11:54:52 PM
+Response
+	Status code: BadRequest
+	Content: {"message":"The request is invalid.","modelState":{"":["The company and tenant parameters cannot be specified simultaneously in one request. Remove the company parameter from the request."]}}
+-----------------------------------------
+
+3/15/2022 11:54:52 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/15/2022 11:54:52 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/15/2022 11:56:06 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/15/2022 11:56:07 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/15/2022 11:56:07 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/15/2022 11:56:17 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/15/2022 11:56:17 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/15/2022 11:56:17 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/15/2022 11:59:13 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/15/2022 11:59:13 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/15/2022 11:59:32 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/15/2022 11:59:33 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/15/2022 11:59:47 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/15/2022 11:59:47 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:05:04 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:05:04 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:05:11 AM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 12:05:12 AM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 12:05:21 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:05:21 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:06:43 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:06:43 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:06:59 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:06:59 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:07:11 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:07:11 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:07:48 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:07:48 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:07:49 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:07:49 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:07:53 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:07:53 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:07:53 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:07:53 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:07:56 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:07:57 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:07:57 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:07:57 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:07:58 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:07:58 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:07:58 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:07:58 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:07:59 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:07:59 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:07:59 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:07:59 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:08:32 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:08:33 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:08:33 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 12:08:33 AM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 12:09:07 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:09:08 AM
+Response
+	Status code: InternalServerError
+	Content: {"message":"An error has occurred.","exceptionMessage":"API Login Limit","exceptionType":"PX.Data.PXException","stackTrace":"   at PX.LicensePolicy.PXLicensePolicy.CheckApiUsersLimits()\r\n   at PX.Data.PXLogin.PX.Data.IPXLogin.LoginUser(String& userName, String password)\r\n   at PX.Api.Services.LoginService.Login(String login, String password, String company, String branch, String locale, String prefix)\r\n   at PX.Api.ContractBased.ILoginServiceExtensions.LoginForSoapApi(ILoginService loginService, IMultiFactorService multiFactorService, String login, String password, String company, String branch, String locale)\r\n   at PX.Api.ContractBased.WebApi.Controllers.AuthController.Login(Credentials credentials)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_1.<GetExecutor>b__0(Object instance, Object[] methodParameters)\r\n   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__15.MoveNext()"}
+-----------------------------------------
+
+3/16/2022 12:12:53 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:13:20 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 12:13:32 AM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:40:22 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:40:24 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:40:36 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:40:44 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:41:00 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:41:00 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:46:35 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:46:35 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:46:37 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:46:38 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:47:02 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:47:02 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:48:09 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:48:09 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:48:10 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:48:11 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:48:11 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:48:11 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:50:21 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:50:21 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:50:21 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:50:21 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:50:21 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:50:21 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:51:14 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:51:14 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:51:14 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:51:15 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:51:15 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:51:15 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:51:45 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:51:45 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:51:45 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:51:45 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:51:46 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:51:46 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:53:48 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:53:48 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:53:48 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:53:48 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:53:48 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:53:48 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:55:15 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:55:15 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:55:15 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:55:15 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:55:15 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:55:15 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:55:30 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/login
+	Body: {"name":"admin","password":"123","company":"","tenant":"","branch":""}
+-----------------------------------------
+
+3/16/2022 5:55:30 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+
+3/16/2022 5:55:30 PM
+Request
+	Method: Get
+	URL: https://acu-demos.us/acumaticaerp/entity/Default/20.200.001/SalesOrder?%24top=5?$top=5
+-----------------------------------------
+
+3/16/2022 5:55:30 PM
+Response
+	Status code: OK
+	Content: [{"id":"211c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":1,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABARTENDE"},"CustomerOrder":{},"Date":{"value":"2013-02-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-02-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T16:02:20.91-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001558"},"OrderTotal":{"value":2500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-02-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"221c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":2,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2850.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"ABCSTUDIOS"},"CustomerOrder":{},"Date":{"value":"2013-03-07T00:00:00-08:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-03-07T00:00:00-08:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T17:18:50.563-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":6.000000},"OrderNbr":{"value":"001559"},"OrderTotal":{"value":2850.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-03-07T00:00:00-08:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"231c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":3,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":1500.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WIDGETBUY"},"CustomerOrder":{},"Date":{"value":"2013-04-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-04-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-14T18:35:56.05-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":3.000000},"OrderNbr":{"value":"001560"},"OrderTotal":{"value":1500.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-04-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"241c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":4,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2000.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WFAN"},"CustomerOrder":{},"Date":{"value":"2013-05-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-05-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T06:55:44.603-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":4.000000},"OrderNbr":{"value":"001561"},"OrderTotal":{"value":2000.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-05-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}},{"id":"251c3b2c-d87f-e411-beca-00b56d0561c2","rowNumber":5,"note":{"value":""},"Approved":{"value":true},"BaseCurrencyID":{"value":"USD"},"BillToAddressOverride":{"value":false},"BillToContactOverride":{"value":false},"CashAccount":{"value":"10200"},"ContactID":{},"ControlTotal":{"value":2375.0000},"CreditHold":{"value":false},"CurrencyID":{"value":"USD"},"CurrencyRate":{"value":1.00000000},"CurrencyRateTypeID":{},"CustomerID":{"value":"WRIGHTCORN"},"CustomerOrder":{},"Date":{"value":"2013-06-07T00:00:00-07:00"},"Description":{"value":"Warehouse pickup - Computer"},"DestinationWarehouseID":{},"DisableAutomaticDiscountUpdate":{"value":false},"EffectiveDate":{"value":"2013-06-07T00:00:00-07:00"},"ExternalRef":{},"Hold":{"value":false},"IsTaxValid":{},"LastModified":{"value":"2014-08-15T09:53:18.52-07:00"},"LocationID":{"value":"MAIN"},"OrderedQty":{"value":5.000000},"OrderNbr":{"value":"001562"},"OrderTotal":{"value":2375.0000},"OrderType":{"value":"CS"},"PaymentMethod":{"value":"CHECK"},"PreferredWarehouseID":{},"Project":{"value":"X"},"ReciprocalRate":{"value":1.00000000},"RequestedOn":{"value":"2013-06-07T00:00:00-07:00"},"ShipToAddressOverride":{"value":false},"ShipToContactOverride":{"value":false},"ShipVia":{},"Status":{"value":"Completed"},"TaxTotal":{"value":0.0000},"VATExemptTotal":{"value":0.0000},"VATTaxableTotal":{"value":0.0000},"custom":{}}]
+-----------------------------------------
+
+3/16/2022 5:55:30 PM
+Request
+	Method: Post
+	URL: https://acu-demos.us/acumaticaerp/entity/auth/logout
+-----------------------------------------
+
+3/16/2022 5:55:30 PM
+Response
+	Status code: NoContent
+	Content: 
+-----------------------------------------
+

@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.AcuAuth[0].IsChecked)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.AcuAuth[0].SiteUrl)
             </th>
             <th>
@@ -37,6 +40,9 @@
     <tbody>
 @foreach (var item in Model.AcuAuth) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsChecked)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SiteUrl)
             </td>

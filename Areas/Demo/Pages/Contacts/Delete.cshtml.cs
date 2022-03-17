@@ -1,56 +1,60 @@
-﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-namespace AcuERP_App.Areas.Demo.Pages.Contacts;
-
-public class DeleteModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Contacts
 {
-    private readonly AppDbContext _context;
-
-    public DeleteModel(AppDbContext context)
+    public class DeleteModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    [BindProperty]
-    public CR_Contacts CR_Contacts { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DeleteModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        CR_Contacts = await _context.CR_Contacts.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public CR_Contact CR_Contact { get; set; }
 
-        if (CR_Contacts == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-    public async Task<IActionResult> OnPostAsync(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-        }
+            CR_Contact = await _context.CR_Contacts.FirstOrDefaultAsync(m => m.Id == id);
 
-        CR_Contacts = await _context.CR_Contacts.FindAsync(id);
-
-        if (CR_Contacts != null)
-        {
-            _context.CR_Contacts.Remove(CR_Contacts);
-            await _context.SaveChangesAsync();
+            if (CR_Contact == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            CR_Contact = await _context.CR_Contacts.FindAsync(id);
+
+            if (CR_Contact != null)
+            {
+                _context.CR_Contacts.Remove(CR_Contact);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
     }
 }

@@ -1,8 +1,9 @@
 ﻿@page
-@model IndexModel
+@model AcuERP_App.Areas.Demo.Pages.Opportunities.IndexModel
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h1>Index</h1>
@@ -14,67 +15,67 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Address)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Address)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Amount)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Amount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].BusinessAccount)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].BusinessAccount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ClassID)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].ClassID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ContactDisplayName)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].ContactDisplayName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ContactID)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].ContactID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ContactInformation)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].ContactInformation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Details)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Details)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Estimation)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Estimation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Location)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Location)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].OpportunityID)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].OpportunityID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Owner)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Owner)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].OwnerEmployeeName)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].OwnerEmployeeName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].ParentAccount)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].ParentAccount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Reason)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Reason)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Stage)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Stage)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Status)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Status)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Subject)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Subject)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OP_Opportunities[0].Total)
+                @Html.DisplayNameFor(model => model.OP_Opportunity[0].Total)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.OP_Opportunities) {
+@foreach (var item in Model.OP_Opportunity) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Address)

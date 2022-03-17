@@ -1,73 +1,78 @@
-﻿
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using AcuERP_App.Data;
 using AcuERP_App.Models;
 
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-
-namespace AcuERP_App.Areas.Demo.Pages.Opportunities;
-
-public class EditModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Opportunities
 {
-    private readonly AppDbContext _context;
-
-    public EditModel(AppDbContext context)
+    public class EditModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    [BindProperty]
-    public OP_Opportunities OP_Opportunities { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public EditModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        OP_Opportunities = await _context.OP_Opportunities.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public OP_Opportunity OP_Opportunity { get; set; }
 
-        if (OP_Opportunities == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
-
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see https://aka.ms/RazorPagesCRUD.
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
-
-        _context.Attach(OP_Opportunities).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!OP_OpportunitiesExists(OP_Opportunities.Id))
+            if (id == null)
             {
                 return NotFound();
             }
-            else
+
+            OP_Opportunity = await _context.OP_Opportunities.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (OP_Opportunity == null)
             {
-                throw;
+                return NotFound();
             }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
-    }
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see https://aka.ms/RazorPagesCRUD.
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-    private bool OP_OpportunitiesExists(int id)
-    {
-        return _context.OP_Opportunities.Any(e => e.Id == id);
+            _context.Attach(OP_Opportunity).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!OP_OpportunityExists(OP_Opportunity.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToPage("./Index");
+        }
+
+        private bool OP_OpportunityExists(int id)
+        {
+            return _context.OP_Opportunities.Any(e => e.Id == id);
+        }
     }
 }

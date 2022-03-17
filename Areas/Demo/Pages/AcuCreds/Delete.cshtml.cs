@@ -1,56 +1,57 @@
-﻿#nullable disable
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace AcuERP_App.Areas.Demo.Pages.AcuCreds;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-public class DeleteModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.AcuCreds
 {
-    private readonly AppDbContext _context;
-
-    public DeleteModel(AppDbContext context)
+    public class DeleteModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    [BindProperty]
-    public AcuAuth AcuAuth { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DeleteModel(AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        AcuAuth = await _context.AcuAuths.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public AcuAuth AcuAuth { get; set; }
 
-        if (AcuAuth == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-    public async Task<IActionResult> OnPostAsync(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-        }
+            AcuAuth = await _context.AcuAuths.FirstOrDefaultAsync(m => m.Id == id);
 
-        AcuAuth = await _context.AcuAuths.FindAsync(id);
-
-        if (AcuAuth != null)
-        {
-            _context.AcuAuths.Remove(AcuAuth);
-            await _context.SaveChangesAsync();
+            if (AcuAuth == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            AcuAuth = await _context.AcuAuths.FindAsync(id);
+
+            if (AcuAuth != null)
+            {
+                _context.AcuAuths.Remove(AcuAuth);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
     }
 }

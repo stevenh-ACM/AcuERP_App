@@ -1,0 +1,44 @@
+﻿@*@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Credential Configuration";
+}
+<h2>Acumatica API @ViewData["Title"] page</h2><br/>
+
+<h3>Existing Connections for Demo</h3>
+<form method="post" >
+<table class="table container-fluid">
+    <thead>
+        <tr>
+            <th>Check</th>
+            <th>Site Url</th>
+            <th>User Name</th>                
+            <th>Tenant</th>
+            <th>Branch</th>
+            <th>Locale</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var acuAuth in Model.acuAuths)
+        {
+            <input asp-for="@acuAuth.Id" type="hidden"/>
+            <tr>
+                <td><input type="checkbox" value="false" asp-for="@acuAuth.IsChecked"/></td>
+                <td>@acuAuth.SiteUrl</td>
+                <td>@acuAuth.UserName</td>
+                <td>@acuAuth.Tenant</td>
+                <td>@acuAuth.Branch</td>
+                <td>@acuAuth.Locale</td>
+                <td>
+                    <a asp-page="./edit" asp-route-id="@acuAuth.Id">Edit</a> |
+                    <a asp-page="./details" asp-route-id="@acuAuth.Id">Details</a> |
+                    <a asp-page="./delete" asp-route-id="@acuAuth.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button type="submit">Submit</button><br/>
+</form>
+*@

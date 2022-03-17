@@ -1,25 +1,30 @@
-﻿
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using AcuERP_App.Data;
 using AcuERP_App.Models;
 
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-
-namespace AcuERP_App.Areas.Demo.Pages.Contacts;
-
-public class IndexModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Contacts
 {
-    private readonly AppDbContext _context;
-
-    public IndexModel(AppDbContext context)
+    public class IndexModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    public IList<CR_Contacts> CR_Contacts { get; set; }
+        public IndexModel(AcuERP_App.Data.AppDbContext context)
+        {
+            _context = context;
+        }
 
-    public async Task OnGetAsync()
-    {
-        CR_Contacts = await _context.CR_Contacts.ToListAsync();
+        public IList<CR_Contact> CR_Contact { get;set; }
+
+        public async Task OnGetAsync()
+        {
+            CR_Contact = await _context.CR_Contacts.ToListAsync();
+        }
     }
 }

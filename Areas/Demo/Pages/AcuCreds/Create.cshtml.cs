@@ -1,40 +1,41 @@
 ﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AcuERP_App.Areas.Demo.Pages.AcuCreds;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-public class CreateModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.AcuCreds
 {
-    private readonly AppDbContext _context;
-
-    public CreateModel(AppDbContext context)
+    public class CreateModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    public IActionResult OnGet()
-    {
-        return Page();
-    }
+        public CreateModel(AppDbContext context)
+        {
+            _context = context;
+        }
 
-    [BindProperty]
-    public AcuAuth AcuAuth { get; set; }
-
-    // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
+        public IActionResult OnGet()
         {
             return Page();
         }
 
-        _context.AcuAuths.Add(AcuAuth);
-        await _context.SaveChangesAsync();
+        [BindProperty]
+        public AcuAuth AcuAuth { get; set; }
 
-        return RedirectToPage("./Index");
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _context.AcuAuths.Add(AcuAuth);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("./Index");
+        }
     }
 }

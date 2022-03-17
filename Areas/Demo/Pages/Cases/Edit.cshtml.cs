@@ -1,73 +1,78 @@
-﻿
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using AcuERP_App.Data;
 using AcuERP_App.Models;
 
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-
-namespace AcuERP_App.Areas.Demo.Pages.Cases;
-
-public class EditModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Cases
 {
-    private readonly AppDbContext _context;
-
-    public EditModel(AppDbContext context)
+    public class EditModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    [BindProperty]
-    public CR_Cases CR_Cases { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public EditModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        CR_Cases = await _context.CR_Cases.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public CR_Case CR_Case { get; set; }
 
-        if (CR_Cases == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
-
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see https://aka.ms/RazorPagesCRUD.
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
-
-        _context.Attach(CR_Cases).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!CR_CasesExists(CR_Cases.Id))
+            if (id == null)
             {
                 return NotFound();
             }
-            else
+
+            CR_Case = await _context.CR_Cases.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (CR_Case == null)
             {
-                throw;
+                return NotFound();
             }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
-    }
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see https://aka.ms/RazorPagesCRUD.
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-    private bool CR_CasesExists(int id)
-    {
-        return _context.CR_Cases.Any(e => e.Id == id);
+            _context.Attach(CR_Case).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CR_CaseExists(CR_Case.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToPage("./Index");
+        }
+
+        private bool CR_CaseExists(int id)
+        {
+            return _context.CR_Cases.Any(e => e.Id == id);
+        }
     }
 }

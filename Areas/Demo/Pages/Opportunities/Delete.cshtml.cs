@@ -1,56 +1,60 @@
-﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-namespace AcuERP_App.Areas.Demo.Pages.Opportunities;
-
-public class DeleteModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Opportunities
 {
-    private readonly AppDbContext _context;
-
-    public DeleteModel(AppDbContext context)
+    public class DeleteModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    [BindProperty]
-    public OP_Opportunities OP_Opportunities { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DeleteModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        OP_Opportunities = await _context.OP_Opportunities.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public OP_Opportunity OP_Opportunity { get; set; }
 
-        if (OP_Opportunities == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-    public async Task<IActionResult> OnPostAsync(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-        }
+            OP_Opportunity = await _context.OP_Opportunities.FirstOrDefaultAsync(m => m.Id == id);
 
-        OP_Opportunities = await _context.OP_Opportunities.FindAsync(id);
-
-        if (OP_Opportunities != null)
-        {
-            _context.OP_Opportunities.Remove(OP_Opportunities);
-            await _context.SaveChangesAsync();
+            if (OP_Opportunity == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            OP_Opportunity = await _context.OP_Opportunities.FindAsync(id);
+
+            if (OP_Opportunity != null)
+            {
+                _context.OP_Opportunities.Remove(OP_Opportunity);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
     }
 }

@@ -1,36 +1,38 @@
-﻿#nullable disable
-using AcuERP_App.Models;
-
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace AcuERP_App.Areas.Demo.Pages.AcuCreds;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-public class DetailsModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.AcuCreds
 {
-    private readonly AcuERP_App.Data.AppDbContext _context;
-
-    public DetailsModel(AcuERP_App.Data.AppDbContext context)
+    public class DetailsModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    public AcuAuth AcuAuth { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DetailsModel(AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        AcuAuth = await _context.AcuAuths.FirstOrDefaultAsync(m => m.Id == id);
+        public AcuAuth AcuAuth { get; set; }
 
-        if (AcuAuth == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            AcuAuth = await _context.AcuAuths.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (AcuAuth == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
-        return Page();
     }
 }

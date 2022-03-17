@@ -21,11 +21,11 @@ public class AppDbContext : IdentityDbContext<DemoUser>
 
     public DbSet<AcuAuth> AcuAuths { get; set; }
 
-    public DbSet<CR_Cases> CR_Cases { get; set; }
+    public DbSet<CR_Case> CR_Cases { get; set; }
 
-    public DbSet<CR_Contacts> CR_Contacts { get; set; }
+    public DbSet<CR_Contact> CR_Contacts { get; set; }
 
-    public DbSet<OP_Opportunities> OP_Opportunities { get; set; }
+    public DbSet<OP_Opportunity> OP_Opportunities { get; set; }
 
-    public DbSet<SO_SalesOrders> SO_SalesOrders { get; set; }
+    public DbSet<SO_SalesOrder> SO_SalesOrders { get; set; }
 }

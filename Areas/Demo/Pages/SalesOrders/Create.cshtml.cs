@@ -1,17 +1,21 @@
-﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
 namespace AcuERP_App.Areas.Demo.Pages.SalesOrders
 {
     public class CreateModel : PageModel
     {
-        private readonly AppDbContext _context;
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-        public CreateModel(AppDbContext context)
+        public CreateModel(AcuERP_App.Data.AppDbContext context)
         {
             _context = context;
         }
@@ -22,7 +26,7 @@ namespace AcuERP_App.Areas.Demo.Pages.SalesOrders
         }
 
         [BindProperty]
-        public SO_SalesOrders SO_SalesOrders { get; set; }
+        public SO_SalesOrder SO_SalesOrder { get; set; }
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
@@ -32,7 +36,7 @@ namespace AcuERP_App.Areas.Demo.Pages.SalesOrders
                 return Page();
             }
 
-            _context.SO_SalesOrders.Add(SO_SalesOrders);
+            _context.SO_SalesOrders.Add(SO_SalesOrder);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -14,6 +14,11 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="AcuAuth.Id" />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AcuAuth.IsChecked" /> @Html.DisplayNameFor(model => model.AcuAuth.IsChecked)
+                </label>
+            </div>
             <div class="form-group">
                 <label asp-for="AcuAuth.SiteUrl" class="control-label"></label>
                 <input asp-for="AcuAuth.SiteUrl" class="form-control" />

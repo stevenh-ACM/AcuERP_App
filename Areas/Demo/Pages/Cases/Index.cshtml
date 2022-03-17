@@ -1,8 +1,9 @@
 ﻿@page
-@model IndexModel
+@model AcuERP_App.Areas.Demo.Pages.Cases.IndexModel
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h1>Index</h1>
@@ -14,58 +15,58 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].BusinessAccount)
+                @Html.DisplayNameFor(model => model.CR_Case[0].BusinessAccount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].BusinessAccountName)
+                @Html.DisplayNameFor(model => model.CR_Case[0].BusinessAccountName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].CaseID)
+                @Html.DisplayNameFor(model => model.CR_Case[0].CaseID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].ClassID)
+                @Html.DisplayNameFor(model => model.CR_Case[0].ClassID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].ClosingDate)
+                @Html.DisplayNameFor(model => model.CR_Case[0].ClosingDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].ContactDisplayName)
+                @Html.DisplayNameFor(model => model.CR_Case[0].ContactDisplayName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].ContactID)
+                @Html.DisplayNameFor(model => model.CR_Case[0].ContactID)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Contract)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Contract)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].DateReported)
+                @Html.DisplayNameFor(model => model.CR_Case[0].DateReported)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Description)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Owner)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Owner)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].OwnerEmployeeName)
+                @Html.DisplayNameFor(model => model.CR_Case[0].OwnerEmployeeName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Priority)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Priority)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Reason)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Reason)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Status)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Status)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CR_Cases[0].Subject)
+                @Html.DisplayNameFor(model => model.CR_Case[0].Subject)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.CR_Cases) {
+@foreach (var item in Model.CR_Case) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.BusinessAccount)

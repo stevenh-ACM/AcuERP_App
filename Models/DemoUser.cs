@@ -1,6 +1,9 @@
 ﻿
 using Microsoft.AspNetCore.Identity;
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace AcuERP_App.Models;
 
 /// <summary>
@@ -8,10 +11,16 @@ namespace AcuERP_App.Models;
 /// </summary>
 public class DemoUser : IdentityUser
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
+
     [PersonalData]
     public string Name { get; set; }
+
     [PersonalData]
-    public DateTime DOB { get; set; }
+    [DataType(DataType.Date)]
+    public DateTime? DOB { get; set; }
 
 }
 

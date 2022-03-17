@@ -1,40 +1,45 @@
-﻿
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using AcuERP_App.Data;
 using AcuERP_App.Models;
 
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-namespace AcuERP_App.Areas.Demo.Pages.Cases;
-
-public class CreateModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Cases
 {
-    private readonly AppDbContext _context;
-
-    public CreateModel(AppDbContext context)
+    public class CreateModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    public IActionResult OnGet()
-    {
-        return Page();
-    }
+        public CreateModel(AcuERP_App.Data.AppDbContext context)
+        {
+            _context = context;
+        }
 
-    [BindProperty]
-    public CR_Cases CR_Cases { get; set; }
-
-    // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
+        public IActionResult OnGet()
         {
             return Page();
         }
 
-        _context.CR_Cases.Add(CR_Cases);
-        await _context.SaveChangesAsync();
+        [BindProperty]
+        public CR_Case CR_Case { get; set; }
 
-        return RedirectToPage("./Index");
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            _context.CR_Cases.Add(CR_Case);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("./Index");
+        }
     }
 }

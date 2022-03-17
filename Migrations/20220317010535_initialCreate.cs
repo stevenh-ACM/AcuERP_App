@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -14,12 +15,13 @@ namespace AcuERP_App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    IsChecked = table.Column<bool>(type: "bit", nullable: false),
                     SiteUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Tenant = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Branch = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Locale = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    UserName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Tenant = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    Branch = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    Locale = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -46,7 +48,7 @@ namespace AcuERP_App.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DOB = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DOB = table.Column<DateTime>(type: "datetime2", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -73,22 +75,22 @@ namespace AcuERP_App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BusinessAccount = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BusinessAccountName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CaseID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClassID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClosingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ContactDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactID = table.Column<int>(type: "int", nullable: false),
-                    Contract = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DateReported = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OwnerEmployeeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Priority = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Reason = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Subject = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    BusinessAccount = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    BusinessAccountName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    CaseID = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ClassID = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ClosingDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    ContactDisplayName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    ContactID = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    Contract = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    DateReported = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Owner = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    OwnerEmployeeName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Priority = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Reason = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Subject = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -101,25 +103,25 @@ namespace AcuERP_App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Active = table.Column<bool>(type: "bit", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BusinessAccount = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Active = table.Column<bool>(type: "bit", nullable: true),
+                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    BusinessAccount = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    CompanyName = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     ContactClass = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactID = table.Column<int>(type: "int", nullable: false),
-                    DisplayName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ContactID = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    DisplayName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    JobTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MiddleName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OwnerEmployeeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ParentAccount = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    JobTitle = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    MiddleName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Owner = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    OwnerEmployeeName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    ParentAccount = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Phone1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone1Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Phone1Type = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Type = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -132,25 +134,25 @@ namespace AcuERP_App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    BusinessAccount = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ClassID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContactID = table.Column<int>(type: "int", nullable: false),
-                    ContactInformation = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Details = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Estimation = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OpportunityID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Owner = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    BusinessAccount = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ClassID = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ContactDisplayName = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    ContactID = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    ContactInformation = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Details = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Estimation = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Location = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    OpportunityID = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Owner = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     OwnerEmployeeName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ParentAccount = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Reason = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Stage = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    ParentAccount = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Reason = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Stage = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Subject = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -163,20 +165,20 @@ namespace AcuERP_App.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Approved = table.Column<bool>(type: "bit", nullable: false),
-                    ContactID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CustomerID = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CustomerOrder = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Hold = table.Column<bool>(type: "bit", nullable: false),
-                    OrderedQty = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    OrderNbr = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    OrderTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    OrderType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShipToAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Totals = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Approved = table.Column<bool>(type: "bit", nullable: true),
+                    ContactID = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
+                    CustomerID = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    CustomerOrder = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Hold = table.Column<bool>(type: "bit", nullable: true),
+                    OrderedQty = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    OrderNbr = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    OrderTotal = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    OrderType = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ShipToAddress = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Totals = table.Column<decimal>(type: "decimal(18,2)", nullable: true)
                 },
                 constraints: table =>
                 {

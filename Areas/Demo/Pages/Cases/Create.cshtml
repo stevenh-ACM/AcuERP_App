@@ -1,97 +1,98 @@
 ﻿@page
-@model CreateModel
+@model AcuERP_App.Areas.Demo.Pages.Cases.CreateModel
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <h1>Create</h1>
 
-<h4>CR_Cases</h4>
+<h4>CR_Case</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CR_Cases.BusinessAccount" class="control-label"></label>
-                <input asp-for="CR_Cases.BusinessAccount" class="form-control" />
-                <span asp-validation-for="CR_Cases.BusinessAccount" class="text-danger"></span>
+                <label asp-for="CR_Case.BusinessAccount" class="control-label"></label>
+                <input asp-for="CR_Case.BusinessAccount" class="form-control" />
+                <span asp-validation-for="CR_Case.BusinessAccount" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.BusinessAccountName" class="control-label"></label>
-                <input asp-for="CR_Cases.BusinessAccountName" class="form-control" />
-                <span asp-validation-for="CR_Cases.BusinessAccountName" class="text-danger"></span>
+                <label asp-for="CR_Case.BusinessAccountName" class="control-label"></label>
+                <input asp-for="CR_Case.BusinessAccountName" class="form-control" />
+                <span asp-validation-for="CR_Case.BusinessAccountName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.CaseID" class="control-label"></label>
-                <input asp-for="CR_Cases.CaseID" class="form-control" />
-                <span asp-validation-for="CR_Cases.CaseID" class="text-danger"></span>
+                <label asp-for="CR_Case.CaseID" class="control-label"></label>
+                <input asp-for="CR_Case.CaseID" class="form-control" />
+                <span asp-validation-for="CR_Case.CaseID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.ClassID" class="control-label"></label>
-                <input asp-for="CR_Cases.ClassID" class="form-control" />
-                <span asp-validation-for="CR_Cases.ClassID" class="text-danger"></span>
+                <label asp-for="CR_Case.ClassID" class="control-label"></label>
+                <input asp-for="CR_Case.ClassID" class="form-control" />
+                <span asp-validation-for="CR_Case.ClassID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.ClosingDate" class="control-label"></label>
-                <input asp-for="CR_Cases.ClosingDate" class="form-control" />
-                <span asp-validation-for="CR_Cases.ClosingDate" class="text-danger"></span>
+                <label asp-for="CR_Case.ClosingDate" class="control-label"></label>
+                <input asp-for="CR_Case.ClosingDate" class="form-control" />
+                <span asp-validation-for="CR_Case.ClosingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.ContactDisplayName" class="control-label"></label>
-                <input asp-for="CR_Cases.ContactDisplayName" class="form-control" />
-                <span asp-validation-for="CR_Cases.ContactDisplayName" class="text-danger"></span>
+                <label asp-for="CR_Case.ContactDisplayName" class="control-label"></label>
+                <input asp-for="CR_Case.ContactDisplayName" class="form-control" />
+                <span asp-validation-for="CR_Case.ContactDisplayName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.ContactID" class="control-label"></label>
-                <input asp-for="CR_Cases.ContactID" class="form-control" />
-                <span asp-validation-for="CR_Cases.ContactID" class="text-danger"></span>
+                <label asp-for="CR_Case.ContactID" class="control-label"></label>
+                <input asp-for="CR_Case.ContactID" class="form-control" />
+                <span asp-validation-for="CR_Case.ContactID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Contract" class="control-label"></label>
-                <input asp-for="CR_Cases.Contract" class="form-control" />
-                <span asp-validation-for="CR_Cases.Contract" class="text-danger"></span>
+                <label asp-for="CR_Case.Contract" class="control-label"></label>
+                <input asp-for="CR_Case.Contract" class="form-control" />
+                <span asp-validation-for="CR_Case.Contract" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.DateReported" class="control-label"></label>
-                <input asp-for="CR_Cases.DateReported" class="form-control" />
-                <span asp-validation-for="CR_Cases.DateReported" class="text-danger"></span>
+                <label asp-for="CR_Case.DateReported" class="control-label"></label>
+                <input asp-for="CR_Case.DateReported" class="form-control" />
+                <span asp-validation-for="CR_Case.DateReported" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Description" class="control-label"></label>
-                <input asp-for="CR_Cases.Description" class="form-control" />
-                <span asp-validation-for="CR_Cases.Description" class="text-danger"></span>
+                <label asp-for="CR_Case.Description" class="control-label"></label>
+                <input asp-for="CR_Case.Description" class="form-control" />
+                <span asp-validation-for="CR_Case.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Owner" class="control-label"></label>
-                <input asp-for="CR_Cases.Owner" class="form-control" />
-                <span asp-validation-for="CR_Cases.Owner" class="text-danger"></span>
+                <label asp-for="CR_Case.Owner" class="control-label"></label>
+                <input asp-for="CR_Case.Owner" class="form-control" />
+                <span asp-validation-for="CR_Case.Owner" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.OwnerEmployeeName" class="control-label"></label>
-                <input asp-for="CR_Cases.OwnerEmployeeName" class="form-control" />
-                <span asp-validation-for="CR_Cases.OwnerEmployeeName" class="text-danger"></span>
+                <label asp-for="CR_Case.OwnerEmployeeName" class="control-label"></label>
+                <input asp-for="CR_Case.OwnerEmployeeName" class="form-control" />
+                <span asp-validation-for="CR_Case.OwnerEmployeeName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Priority" class="control-label"></label>
-                <input asp-for="CR_Cases.Priority" class="form-control" />
-                <span asp-validation-for="CR_Cases.Priority" class="text-danger"></span>
+                <label asp-for="CR_Case.Priority" class="control-label"></label>
+                <input asp-for="CR_Case.Priority" class="form-control" />
+                <span asp-validation-for="CR_Case.Priority" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Reason" class="control-label"></label>
-                <input asp-for="CR_Cases.Reason" class="form-control" />
-                <span asp-validation-for="CR_Cases.Reason" class="text-danger"></span>
+                <label asp-for="CR_Case.Reason" class="control-label"></label>
+                <input asp-for="CR_Case.Reason" class="form-control" />
+                <span asp-validation-for="CR_Case.Reason" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Status" class="control-label"></label>
-                <input asp-for="CR_Cases.Status" class="form-control" />
-                <span asp-validation-for="CR_Cases.Status" class="text-danger"></span>
+                <label asp-for="CR_Case.Status" class="control-label"></label>
+                <input asp-for="CR_Case.Status" class="form-control" />
+                <span asp-validation-for="CR_Case.Status" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CR_Cases.Subject" class="control-label"></label>
-                <input asp-for="CR_Cases.Subject" class="form-control" />
-                <span asp-validation-for="CR_Cases.Subject" class="text-danger"></span>
+                <label asp-for="CR_Case.Subject" class="control-label"></label>
+                <input asp-for="CR_Case.Subject" class="form-control" />
+                <span asp-validation-for="CR_Case.Subject" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

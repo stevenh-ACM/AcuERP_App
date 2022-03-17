@@ -1,24 +1,28 @@
 ﻿
-using AcuERP_App.Models;
-
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace AcuERP_App.Areas.Demo.Pages.AcuCreds;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-public class IndexModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.AcuCreds
 {
-    private readonly AcuERP_App.Data.AppDbContext _context;
-
-    public IndexModel(AcuERP_App.Data.AppDbContext context)
+    public class IndexModel : PageModel
     {
-        _context = context;
-    }
+        private readonly ILogger<IndexModel> _logger;
+        private readonly AppDbContext _context;
 
-    public IList<AcuAuth> AcuAuth { get; set; }
+        public IndexModel(AppDbContext context, ILogger<IndexModel> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
 
-    public async Task OnGetAsync()
-    {
-        AcuAuth = await _context.AcuAuths.ToListAsync();
+        public IList<AcuAuth> AcuAuth { get;set; }
+
+        public async Task OnGetAsync()
+        {
+            AcuAuth = await _context.AcuAuths.ToListAsync();
+        }
     }
 }

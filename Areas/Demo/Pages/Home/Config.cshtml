@@ -1,7 +1,7 @@
 ﻿@page
-@model SetupModel
-@{
-    ViewData["Title"] = "Demo Setup";
+@model ConfigModel
+@{    
+    ViewData["Title"] = "Configuration";
 }
 <h2>Acumatica API @ViewData["Title"] page</h2><br/>
 
@@ -34,8 +34,8 @@
         }
     </tbody>
 </table>
-<a asp-area="Demo" asp-page="./Main">Get SalesOrder</a>
-
+<a asp-area="Demo" asp-page="./Main">Get SalesOrder</a><br/>
+<h3>Configure New Acumatica ERP Connection</h3>
 <form method="post">
 
     <div>

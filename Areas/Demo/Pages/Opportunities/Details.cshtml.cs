@@ -1,37 +1,41 @@
-﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-namespace AcuERP_App.Areas.Demo.Pages.Opportunities;
-
-public class DetailsModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Opportunities
 {
-    private readonly AppDbContext _context;
-
-    public DetailsModel(AppDbContext context)
+    public class DetailsModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    public OP_Opportunities OP_Opportunities { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DetailsModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        OP_Opportunities = await _context.OP_Opportunities.FirstOrDefaultAsync(m => m.Id == id);
+        public OP_Opportunity OP_Opportunity { get; set; }
 
-        if (OP_Opportunities == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            OP_Opportunity = await _context.OP_Opportunities.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (OP_Opportunity == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
-        return Page();
     }
 }

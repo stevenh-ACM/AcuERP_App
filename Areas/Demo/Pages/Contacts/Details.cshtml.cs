@@ -1,37 +1,41 @@
-﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-namespace AcuERP_App.Areas.Demo.Pages.Contacts;
-
-public class DetailsModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Contacts
 {
-    private readonly AppDbContext _context;
-
-    public DetailsModel(AppDbContext context)
+    public class DetailsModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    public CR_Contacts CR_Contacts { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DetailsModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        CR_Contacts = await _context.CR_Contacts.FirstOrDefaultAsync(m => m.Id == id);
+        public CR_Contact CR_Contact { get; set; }
 
-        if (CR_Contacts == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            CR_Contact = await _context.CR_Contacts.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (CR_Contact == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
-        return Page();
     }
 }

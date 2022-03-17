@@ -1,73 +1,74 @@
 ﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace AcuERP_App.Areas.Demo.Pages.AcuCreds;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-public class EditModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.AcuCreds
 {
-    private readonly AppDbContext _context;
-
-    public EditModel(AppDbContext context)
+    public class EditModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AppDbContext _context;
 
-    [BindProperty]
-    public AcuAuth AcuAuth { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public EditModel(AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        AcuAuth = await _context.AcuAuths.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public AcuAuth AcuAuth { get; set; }
 
-        if (AcuAuth == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
-
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see https://aka.ms/RazorPagesCRUD.
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
-
-        _context.Attach(AcuAuth).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!AcuAuthExists(AcuAuth.Id))
+            if (id == null)
             {
                 return NotFound();
             }
-            else
+
+            AcuAuth = await _context.AcuAuths.FirstOrDefaultAsync(m => m.Id == id);
+
+            if (AcuAuth == null)
             {
-                throw;
+                return NotFound();
             }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
-    }
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see https://aka.ms/RazorPagesCRUD.
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-    private bool AcuAuthExists(int id)
-    {
-        return _context.AcuAuths.Any(e => e.Id == id);
+            _context.Attach(AcuAuth).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!AcuAuthExists(AcuAuth.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToPage("./Index");
+        }
+
+        private bool AcuAuthExists(int id)
+        {
+            return _context.AcuAuths.Any(e => e.Id == id);
+        }
     }
 }

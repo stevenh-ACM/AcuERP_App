@@ -1,56 +1,60 @@
-﻿
-using AcuERP_App.Data;
-using AcuERP_App.Models;
-
+﻿#nullable disable
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using AcuERP_App.Data;
+using AcuERP_App.Models;
 
-namespace AcuERP_App.Areas.Demo.Pages.Cases;
-
-public class DeleteModel : PageModel
+namespace AcuERP_App.Areas.Demo.Pages.Cases
 {
-    private readonly AppDbContext _context;
-
-    public DeleteModel(AppDbContext context)
+    public class DeleteModel : PageModel
     {
-        _context = context;
-    }
+        private readonly AcuERP_App.Data.AppDbContext _context;
 
-    [BindProperty]
-    public CR_Cases CR_Cases { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public DeleteModel(AcuERP_App.Data.AppDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        CR_Cases = await _context.CR_Cases.FirstOrDefaultAsync(m => m.Id == id);
+        [BindProperty]
+        public CR_Case CR_Case { get; set; }
 
-        if (CR_Cases == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-    public async Task<IActionResult> OnPostAsync(int? id)
-    {
-        if (id == null)
-        {
-            return NotFound();
-        }
+            CR_Case = await _context.CR_Cases.FirstOrDefaultAsync(m => m.Id == id);
 
-        CR_Cases = await _context.CR_Cases.FindAsync(id);
-
-        if (CR_Cases != null)
-        {
-            _context.CR_Cases.Remove(CR_Cases);
-            await _context.SaveChangesAsync();
+            if (CR_Case == null)
+            {
+                return NotFound();
+            }
+            return Page();
         }
 
-        return RedirectToPage("./Index");
+        public async Task<IActionResult> OnPostAsync(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            CR_Case = await _context.CR_Cases.FindAsync(id);
+
+            if (CR_Case != null)
+            {
+                _context.CR_Cases.Remove(CR_Case);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
     }
 }

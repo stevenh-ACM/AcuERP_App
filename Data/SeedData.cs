@@ -51,8 +51,8 @@ public static class SeedData
                     SiteUrl = "https://acu-demos.us/acumaticaerp",
                     UserName = "admin",
                     Password = "123",
-                    Tenant = "MyStoreInstance",
-                    Branch = "MyStore",
+                    Tenant = "MyStore",
+                    Branch = "MYSTORE",
                     Locale = "en-us"
 
                 },
@@ -62,7 +62,7 @@ public static class SeedData
                     SiteUrl = "https://acu-demos.us/acumaticaerp",
                     UserName = "admin",
                     Password = "123",
-                    Tenant = "OtherTenant",
+                    Tenant = "Company",
                     Branch = "other",
                     Locale = "en-us"
 

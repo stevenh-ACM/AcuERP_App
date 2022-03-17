@@ -8,12 +8,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AcuERP_App.Areas.Demo.Pages.Home;
 
-public class SetupModel : PageModel
+public class ConfigModel : PageModel
 {
-    private readonly ILogger<SetupModel> _logger;
+    private readonly ILogger<ConfigModel> _logger;
     private readonly AppDbContext _context;
 
-    public SetupModel(AppDbContext context, ILogger<SetupModel> logger)
+    public ConfigModel(AppDbContext context, ILogger<ConfigModel> logger)
     {
         _context = context;
         _logger = logger;
@@ -58,5 +58,3 @@ public class SetupModel : PageModel
         return RedirectToPage("./Main");
     }
 }
-
-
